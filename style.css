@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+
+}
+.container {
+    width: 400px;
+    padding: 30px;
+    max-width: 90%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.25);
+}
+.container h1{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+#taskInput {
+    width: 100%;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+     border: 1px solid #aaa;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+#taskInput::placeholder {
+    color: #888;
+}
+#taskInput:focus {
+    outline: none;
+    border-color: blueviolet;
+}
+#message {
+    text-align: center;
+    font-size: 16px;
+    color: red;
+    
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 12px;
+}
+#add-button,
+#clear-all {
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: blueviolet;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+#add-button:hover,
+#clear-all:hover{
+    background-color: #6a1bb1;
+      transform: translateY(-2px);
+       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}
+#taskList {
+    list-style: none;
+    margin-top: 25px;
+}
+#taskList li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+#taskList li:hover{
+      background-color: #eeeeee;
+}
+#taskList li span {
+    flex: 1;
+    font-size: 16px;
+}
+#taskList li button {
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+     transition: background-color 0.2s ease;
+}
+#taskList li button:hover {
+      background-color: #e0e0e0;
+      transform: translateY(-2px);
+}
+.edit-input {
+    padding: 6px 8px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center; 
+}
+.edit-input + p { 
+      flex-basis: 100%;
+      text-align: center;
+      font-size: 16px;
+      margin: 0;
+      color: red;
+}
+.edit-input:focus {
+    outline: none;
+    border-color: blueviolet;
+}
+#taskList li.completed span {
+    text-decoration: line-through;
+      opacity: 1;
+}
+#taskCount,
+#completedCount {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #555;
+}
